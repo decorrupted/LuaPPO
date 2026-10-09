@@ -361,7 +361,7 @@ end)
 --------------------------------------------------
 
 test("computeFromBuffer works with RolloutBuffer", function()
-	local RolloutBuffer = require(script.Parent.RolloutBuffer)
+	local RolloutBuffer = loadstring(game:HttpGet("https://raw.githubusercontent.com/decorrupted/LuaPPO/refs/heads/main/src/RolloutBuffer.lua"))()
 	local buffer = RolloutBuffer.new(5)
 
 	buffer:add(makeExperience(1, 0.5, 0.6))
